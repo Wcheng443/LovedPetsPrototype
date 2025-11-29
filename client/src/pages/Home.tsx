@@ -2,6 +2,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Clock, MapPin, Phone, Mail } from "lucide-react";
 
+import dogRunningImg from "@assets/generated_images/happy_dog_running.png";
+import kittenPlayingImg from "@assets/generated_images/kitten_playing.png";
+
 export default function Home() {
   return (
     <div className="space-y-12 pb-12">
@@ -44,14 +47,14 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 gap-6">
             <div className="p-2 bg-wood-100 rounded-lg shadow-lg transform -rotate-1 hover:rotate-0 transition-transform duration-300 border border-wood-300">
               <img 
-                src="https://images.unsplash.com/photo-1553322396-0c980a5c1a20?auto=format&fit=crop&w=800&q=80" 
+                src={dogRunningImg} 
                 alt="Happy dog running" 
                 className="rounded shadow-inner border-2 border-wood-200 aspect-video object-cover w-full"
               />
             </div>
             <div className="p-2 bg-wood-100 rounded-lg shadow-lg transform rotate-1 hover:rotate-0 transition-transform duration-300 border border-wood-300">
               <img 
-                src="https://images.unsplash.com/photo-1513245543132-31f507417b26?auto=format&fit=crop&w=800&q=80" 
+                src={kittenPlayingImg} 
                 alt="Kitten playing" 
                 className="rounded shadow-inner border-2 border-wood-200 aspect-video object-cover w-full"
               />
