@@ -12,64 +12,66 @@ export default function Volunteer() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
-        <Card className="bg-white border-wood-200 shadow-md h-full">
-          <CardHeader className="bg-wood-50 border-b border-wood-100">
-            <CardTitle className="flex items-center gap-2 text-wood-800">
-              <Heart className="h-6 w-6 text-red-400" /> Volunteer Tasks
+        <div className="wood-card rounded-xl overflow-hidden h-full flex flex-col">
+          <div className="bg-wood-100/50 border-b border-wood-200 p-6">
+            <CardTitle className="flex items-center gap-3 text-2xl text-wood-900 wood-text-emboss">
+              <Heart className="h-7 w-7 text-red-500 fill-current" /> Volunteer Tasks
             </CardTitle>
-          </CardHeader>
-          <CardContent className="p-6">
-            <p className="mb-4 text-wood-600">Volunteers are needed to help with various daily tasks:</p>
+          </div>
+          <CardContent className="p-8 flex-grow bg-[#fffbf7]">
+            <p className="mb-6 text-lg text-wood-800 font-medium">Volunteers are needed to help with various daily tasks:</p>
             {/* Unordered List as requested */}
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {[
                 "Bathe and groom animals",
                 "Play with pets to help them socialize and keep them happy",
                 "Clean kennels and screening rooms",
                 "Help with administrative tasks in the office"
               ].map((task, i) => (
-                <li key={i} className="flex items-start gap-3 text-wood-700">
-                  <PawPrint className="h-5 w-5 text-wood-400 shrink-0 mt-0.5" />
-                  <span>{task}</span>
+                <li key={i} className="flex items-start gap-4 text-wood-800 bg-white/50 p-3 rounded-lg border border-wood-100 shadow-sm">
+                  <PawPrint className="h-6 w-6 text-wood-500 shrink-0 mt-0.5" />
+                  <span className="text-lg">{task}</span>
                 </li>
               ))}
             </ul>
           </CardContent>
-        </Card>
+        </div>
 
-        <div className="space-y-6">
-          <Card className="bg-wood-700 text-wood-50 border-none shadow-lg">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-white">
-                <ClipboardList className="h-6 w-6" /> How to Become a Volunteer
+        <div className="space-y-8">
+          <div className="bg-wood-800 text-wood-50 border-4 border-wood-600 shadow-xl rounded-xl overflow-hidden relative">
+             <div className="absolute top-0 left-0 w-full h-1 bg-wood-500/50"></div>
+            <div className="p-6 border-b border-wood-700 bg-wood-900/30">
+              <CardTitle className="flex items-center gap-3 text-2xl text-white wood-text-emboss">
+                <ClipboardList className="h-7 w-7" /> How to Become a Volunteer
               </CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <p className="mb-4 text-wood-200">If you’re interested in volunteering, please follow these steps:</p>
+            </div>
+            <CardContent className="p-8">
+              <p className="mb-6 text-wood-200 text-lg">If you’re interested in volunteering, please follow these steps:</p>
               {/* Ordered List as requested */}
-              <ol className="space-y-4 list-none ml-0">
-                <li className="flex gap-4">
-                  <span className="flex items-center justify-center w-8 h-8 rounded-full bg-wood-50 text-wood-800 font-bold shrink-0">1</span>
-                  <span className="mt-1">Complete the online application</span>
+              <ol className="space-y-5 list-none ml-0">
+                <li className="flex gap-5 items-center group">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-wood-100 text-wood-900 font-bold shrink-0 shadow-lg border-2 border-wood-300 text-xl group-hover:scale-110 transition-transform">1</span>
+                  <span className="mt-1 font-medium text-lg">Complete the online application</span>
                 </li>
-                <li className="flex gap-4">
-                  <span className="flex items-center justify-center w-8 h-8 rounded-full bg-wood-50 text-wood-800 font-bold shrink-0">2</span>
-                  <span className="mt-1">Submit the application by emailing it to <a href="mailto:volunteer@welovepets.com" className="underline hover:text-wood-200">volunteer@welovepets.com</a></span>
+                <li className="flex gap-5 items-center group">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-wood-100 text-wood-900 font-bold shrink-0 shadow-lg border-2 border-wood-300 text-xl group-hover:scale-110 transition-transform">2</span>
+                  <span className="mt-1 font-medium text-lg">Submit the application by emailing it to <a href="mailto:volunteer@welovepets.com" className="underline hover:text-white text-wood-200 decoration-wood-400 underline-offset-4">volunteer@welovepets.com</a></span>
                 </li>
-                <li className="flex gap-4">
-                  <span className="flex items-center justify-center w-8 h-8 rounded-full bg-wood-50 text-wood-800 font-bold shrink-0">3</span>
-                  <span className="mt-1">Participate in a brief phone interview</span>
+                <li className="flex gap-5 items-center group">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-wood-100 text-wood-900 font-bold shrink-0 shadow-lg border-2 border-wood-300 text-xl group-hover:scale-110 transition-transform">3</span>
+                  <span className="mt-1 font-medium text-lg">Participate in a brief phone interview</span>
                 </li>
-                <li className="flex gap-4">
-                  <span className="flex items-center justify-center w-8 h-8 rounded-full bg-wood-50 text-wood-800 font-bold shrink-0">4</span>
-                  <span className="mt-1">Attend a volunteer training session on the first Saturday of every month</span>
+                <li className="flex gap-5 items-center group">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-wood-100 text-wood-900 font-bold shrink-0 shadow-lg border-2 border-wood-300 text-xl group-hover:scale-110 transition-transform">4</span>
+                  <span className="mt-1 font-medium text-lg">Attend a volunteer training session on the first Saturday of every month</span>
                 </li>
               </ol>
             </CardContent>
-          </Card>
+          </div>
           
-          <div className="bg-wood-100 p-6 rounded-lg border border-wood-200 text-center">
-            <p className="text-wood-800 font-serif italic">
+          <div className="bg-[#fffbf7] p-8 rounded-xl border-2 border-wood-300 text-center shadow-md relative overflow-hidden">
+             <div className="absolute top-0 left-0 w-full h-2 bg-wood-200"></div>
+            <p className="text-wood-800 font-serif italic text-xl leading-relaxed">
               "Volunteering is the ultimate exercise in democracy. You vote in elections once a year, but when you volunteer, you vote every day about the kind of community you want to live in."
             </p>
           </div>

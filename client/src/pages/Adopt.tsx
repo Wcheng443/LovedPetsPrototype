@@ -81,41 +81,43 @@ export default function Adopt() {
         </p>
       </div>
 
-      <Card className="border-wood-200 shadow-lg overflow-hidden bg-white/80 backdrop-blur-sm">
+      <div className="wood-panel overflow-hidden bg-[#fffbf7]">
         <CardContent className="p-0">
           <Table>
-            <TableHeader className="bg-wood-100">
-              <TableRow>
-                <TableHead className="w-[150px] text-wood-800 font-bold">Photo</TableHead>
-                <TableHead className="text-wood-800 font-bold">Name</TableHead>
-                <TableHead className="text-wood-800 font-bold">Breed / Gender</TableHead>
-                <TableHead className="text-wood-800 font-bold">Age</TableHead>
-                <TableHead className="text-wood-800 font-bold">Details</TableHead>
+            <TableHeader className="bg-wood-200/50 border-b-2 border-wood-300">
+              <TableRow className="hover:bg-transparent">
+                <TableHead className="w-[150px] text-wood-900 font-bold text-lg font-serif">Photo</TableHead>
+                <TableHead className="text-wood-900 font-bold text-lg font-serif">Name</TableHead>
+                <TableHead className="text-wood-900 font-bold text-lg font-serif">Breed / Gender</TableHead>
+                <TableHead className="text-wood-900 font-bold text-lg font-serif">Age</TableHead>
+                <TableHead className="text-wood-900 font-bold text-lg font-serif">Details</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {animals.map((animal) => (
-                <TableRow key={animal.name} className="hover:bg-wood-50 transition-colors">
-                  <TableCell>
-                    <div className="h-24 w-24 rounded-lg overflow-hidden border-2 border-wood-200 shadow-sm">
+                <TableRow key={animal.name} className="hover:bg-wood-100/50 transition-colors border-b border-wood-200">
+                  <TableCell className="py-4">
+                    <div className="h-24 w-24 rounded-lg overflow-hidden border-4 border-white shadow-md transform hover:scale-105 transition-transform duration-300 rotate-1">
                       <img 
                         src={animal.photo} 
                         alt={`Photo of ${animal.name}`} 
-                        className="h-full w-full object-cover hover:scale-110 transition-transform duration-500"
+                        className="h-full w-full object-cover"
                       />
                     </div>
                   </TableCell>
-                  <TableCell className="font-serif font-bold text-lg text-wood-700">
+                  <TableCell className="font-serif font-bold text-xl text-wood-800">
                     {animal.name}
                     {animal.badge && (
-                      <Badge variant="secondary" className="ml-2 bg-wood-200 text-wood-800 hover:bg-wood-300">
-                        {animal.badge}
-                      </Badge>
+                      <div className="mt-1">
+                        <Badge variant="secondary" className="bg-wood-600 text-white hover:bg-wood-700 border-none font-sans tracking-wide text-xs uppercase">
+                          {animal.badge}
+                        </Badge>
+                      </div>
                     )}
                   </TableCell>
-                  <TableCell>{animal.breed}</TableCell>
-                  <TableCell>{animal.age}</TableCell>
-                  <TableCell className="max-w-md text-wood-600 leading-relaxed">
+                  <TableCell className="font-medium text-wood-700">{animal.breed}</TableCell>
+                  <TableCell className="font-medium text-wood-700">{animal.age}</TableCell>
+                  <TableCell className="max-w-md text-wood-800 leading-relaxed text-base">
                     {animal.details}
                   </TableCell>
                 </TableRow>
@@ -123,7 +125,7 @@ export default function Adopt() {
             </TableBody>
           </Table>
         </CardContent>
-      </Card>
+      </div>
     </div>
   );
 }
