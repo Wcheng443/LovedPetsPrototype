@@ -16,15 +16,12 @@ export function Navbar() {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link href="/">
           <a className="flex items-center gap-3 hover:scale-105 transition-transform duration-300">
-            <div className="relative">
-              <div className="absolute inset-0 bg-wood-950 rounded-full transform translate-y-1 blur-sm"></div>
-              <img 
-                src={logo} 
-                alt="Loved Pets Logo" 
-                className="h-14 w-14 rounded-full border-4 border-wood-300 bg-white relative z-10 shadow-inner"
-              />
-            </div>
-            <span className="font-serif text-3xl font-bold tracking-wide text-wood-100 wood-text-emboss drop-shadow-md">Loved Pets</span>
+            <img 
+              src={logo} 
+              alt="Loved Pets Logo" 
+              className="h-16 w-auto object-contain drop-shadow-md"
+            />
+            <span className="font-serif text-3xl font-bold tracking-wide text-wood-100 wood-text-emboss drop-shadow-md hidden sm:block">Loved Pets</span>
           </a>
         </Link>
 
