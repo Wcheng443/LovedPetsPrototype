@@ -2,8 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Clock, MapPin, Phone, Mail } from "lucide-react";
 
-import dogRunningImg from "@assets/generated_images/happy_dog_running.png";
-import kittenPlayingImg from "@assets/generated_images/kitten_playing.png";
+import dogRunningImg from "@assets/generated_images/golden_retriever_running.png";
+import kittenPlayingImg from "@assets/generated_images/kitten_playing_with_toy.png";
 
 export default function Home() {
   return (
